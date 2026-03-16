@@ -56,3 +56,11 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
   - Next time I work with AI on a coding task, I would be more critical of the suggestions provided by the AI and not just implement them blindly. I would take the time to understand why the AI is suggesting a certain change and how it fits into the overall codebase before implementing it. This way, I can avoid implementing suggestions that may be incorrect or misleading.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
   - This project made me realize that while AI can be a helpful tool for generating code and providing suggestions, it is not infallible and can sometimes provide incorrect or misleading suggestions. It is important to critically evaluate the suggestions provided by AI and understand the underlying code before implementing any changes. AI should be seen as a teammate that can assist in the coding process, but ultimately, the developer is responsible for the final code and its functionality.
+
+---
+
+## Challenge 5: AI Model Comparison (Logic Bug Fix)
+
+I compared fixes for the reversed hint bug ("Too High" / "Too Low" messaging) from Copilot Chat and ChatGPT. Both models identified the root issue correctly, but Copilot's suggestion fit the existing code style more directly and was quicker to paste into place in `logic_utils.py`.
+
+For readability, Copilot gave the cleaner minimal diff, while ChatGPT gave a more narrative explanation. ChatGPT was slightly stronger at explaining the "why" behind the bug and how to validate the fix with test cases, but Copilot produced the more immediately usable fix for this codebase.
