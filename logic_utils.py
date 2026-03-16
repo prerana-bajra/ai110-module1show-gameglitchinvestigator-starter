@@ -1,5 +1,6 @@
 def get_range_for_difficulty(difficulty: str):
     """Return (low, high) inclusive range for a given difficulty."""
+    #FIX: Reordered difficulty ranges with Copilot so Hard has the widest range.
     if difficulty == "Easy":
         return 1, 20
     if difficulty == "Normal":
@@ -18,16 +19,16 @@ def parse_guess(raw: str):
     if raw is None:
         return False, None, "Enter a guess."
 
+    raw = raw.strip()
+
     if raw == "":
         return False, None, "Enter a guess."
 
+    #FIX: Kept strict integer parsing after AI review to reject decimal guesses cleanly.
     try:
-        if "." in raw:
-            value = int(float(raw))
-        else:
-            value = int(raw)
-    except Exception:
-        return False, None, "That is not a number."
+        value = int(raw)
+    except ValueError:
+        return False, None, "Enter a whole number."
 
     return True, value, None
 
@@ -43,6 +44,7 @@ def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
 
+    #FIX: Flipped hint directions with Copilot after reproducing the reversed-hint bug.
     try:
         if guess > secret:
             return "Too High", "📈 Go LOWER!"
@@ -58,15 +60,14 @@ def check_guess(guess, secret):
 
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
+    # FIX: Award more points for earlier wins, with a 10-point minimum bonus.
     if outcome == "Win":
-        points = 100 - 10 * (attempt_number + 1)
+        points = 100 - 10 * (attempt_number - 1)
         if points < 10:
             points = 10
         return current_score + points
-
+    # FIX: Consistent update in score regardless of the attempt number
     if outcome == "Too High":
-        if attempt_number % 2 == 0:
-            return current_score + 5
         return current_score - 5
 
     if outcome == "Too Low":

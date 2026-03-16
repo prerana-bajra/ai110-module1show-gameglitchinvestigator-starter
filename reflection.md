@@ -42,15 +42,17 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
-  -
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+  - The secret number kept changing in the original app because it was not initialized properly
 - What change did you make that finally gave the game a stable secret number?
-
+  - I initialized the secret number in the reset function and made sure it was only set once when the game starts. This way, the secret number remains stable throughout the game until it is reset again.
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  - One habit I want to reuse is to always run the game and test the specific functionality that I am trying to fix or implement. This helps me verify that my changes are working as intended and that I have actually fixed the bug.
 - What is one thing you would do differently next time you work with AI on a coding task?
+  - Next time I work with AI on a coding task, I would be more critical of the suggestions provided by the AI and not just implement them blindly. I would take the time to understand why the AI is suggesting a certain change and how it fits into the overall codebase before implementing it. This way, I can avoid implementing suggestions that may be incorrect or misleading.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  - This project made me realize that while AI can be a helpful tool for generating code and providing suggestions, it is not infallible and can sometimes provide incorrect or misleading suggestions. It is important to critically evaluate the suggestions provided by AI and understand the underlying code before implementing any changes. AI should be seen as a teammate that can assist in the coding process, but ultimately, the developer is responsible for the final code and its functionality.
