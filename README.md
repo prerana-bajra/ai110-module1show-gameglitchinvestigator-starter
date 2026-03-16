@@ -48,8 +48,8 @@ It wrote the code, ran away, and now the game is unplayable.
 ![alt text](<image2.png>)
 - [x] Challenge 2: Feature Expansion via Agent Mode
    I used Agent Mode to plan and implement a persistent High Score feature. The agent helped break the work into logic, UI, persistence, and testing tasks, then added JSON-backed save/load helpers in `logic_utils.py`, updated `app.py` to display the best score in the sidebar, and saved a new high score whenever a completed game beat the previous best. The agent contribution is also noted directly in the code comments around the high-score state and save flow.
-   
+
 - [x] Challenge 4: Enhanced Game UI
    I improved the player experience with structured, color-coded feedback and emoji-based heat hints (Hot/Warm/Cold), plus a summary table showing each attempt, outcome, and running score for the current game session.
 
-![Enhanced Game UI](![alt text](image3.png))
+![alt text](image3.png)
